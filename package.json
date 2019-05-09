@@ -4,8 +4,9 @@
   "description": "management excercise1",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client": "cd client && npm start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm server\" \"npm client\""
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +14,8 @@
     "body-parser": "^1.19.0",
     "express": "^4.16.4",
     "nodemon": "^1.19.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0"
   }
 }
