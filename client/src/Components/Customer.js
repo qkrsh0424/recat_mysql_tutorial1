@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Management extends React.Component{
+class Customer extends React.Component{
   render(){
     return (
       <div>
@@ -10,4 +10,4 @@ class Management extends React.Component{
   }
 }
 
-export default Management;
+export default Customer;
