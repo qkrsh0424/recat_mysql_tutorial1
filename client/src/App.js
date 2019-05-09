@@ -7,6 +7,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core/styles';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 import Customer from './Components/Customer';
 
@@ -18,6 +19,9 @@ const styles = theme => ({
   },
   table: {
     minWidth: 1080
+  },
+  progress: {
+    margin: theme.spacing.unit * 2,
   }
 })
 
@@ -91,7 +95,7 @@ class App extends Component{
                     job={c.job}
                   />
                 );
-              }) : ""
+              }) : <TableCell colspan="6" align="center"><CircularProgress className={classes.progress} /></TableCell>
             }
           </TableBody>
         </Table>
